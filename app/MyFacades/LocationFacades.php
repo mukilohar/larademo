@@ -7,14 +7,17 @@
 		return $data = json_decode($data);
 
 
-  //     	$url = "https://api.data.gov.in/resource/04cbe4b1-2f2b-4c39-a1d5-1c2e28bc0e32?api-key=579b464db66ec23bdd000001989e35b0bf294d227974a0dd1ff8df57&format=json";
-  //     	$client = new \GuzzleHttp\Client( ['verify' => false]);
-  //     	$response = $client->request('GET', $url);
-		//     echo $res->getStatusCode();
-		// // "200"
-		// echo $res->getHeader('content-type')[0];
-		// $data = $response->getBody();
-		// echo $data;
+
+      /* Comment Above Code */
+
+      	$url = "https://api.data.gov.in/resource/04cbe4b1-2f2b-4c39-a1d5-1c2e28bc0e32?api-key=579b464db66ec23bdd000001989e35b0bf294d227974a0dd1ff8df57&format=json";
+      	//$url = "https://jsonplaceholder.typicode.com/posts";
+      	$client = new \GuzzleHttp\Client( ['verify' => false]);
+      	$response = $client->request('GET', $url);
+		$response->getStatusCode();
+		$response->getHeader('content-type')[0];
+		$data = $response->getBody();
+		return json_decode($data);
       }
    }
 ?>

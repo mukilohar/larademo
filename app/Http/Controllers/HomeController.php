@@ -57,7 +57,8 @@ class HomeController extends Controller
     }
 
     public function list(Request $request){
-        
+        // $data = LocationFacades::getallData();
+        // dd($data);
 
     }
 }
